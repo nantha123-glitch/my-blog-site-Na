@@ -1,30 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Welcome to My Colorful Blog</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NanthaKumar's Blog</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="blog.html">Blog</a>
-  </nav>
+<body class="home">
+  <div class="overlay">
+    <h1>I'm NanthaKumar</h1>
+    <button onclick="toggleAbout()">Want to know about me? Click this</button>
 
-  <h1>Hi, I'm NanthaKumar!</h1>
-  <p>Do you want to know more about me? Feel free to explore the site or contact me.</p>
+    <div id="aboutBox" class="hidden-box">
+      <p>1. I'm NanthaKumar</p>
+      <p>2. I'm a B.Tech. student</p>
+      <p>Studying in Amrita College of Engineering and Technology</p>
+      <p>Department of Artificial Intelligence and Data Science</p>
+    </div>
+  </div>
 
-  <section>
-    <h2>Latest Posts</h2>
-    <ul>
-      <li><a href="blog.html#post1">🔹 Why I Started Blogging</a></li>
-      <li><a href="blog.html#post2">🔹 HTML Basics for Beginners</a></li>
-    </ul>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 NanthaKumar. All rights reserved.</p>
-  </footer>
+  <script>
+    function toggleAbout() {
+      const box = document.getElementById('aboutBox');
+      box.classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
